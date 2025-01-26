@@ -1,14 +1,12 @@
 # Project 3: Spots
 
 ### Overview  
-
-* Intro  
-* Figma  
-* Images  
+Using my knowledge of html structure and css language, I created a copy of the "Spots" page 
   
 **Intro**
   
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
+For this project, I had to create a file structure to match the website, "Spots," from Figma.
+It has html and css as the coding languages. And within the files, I have used flexbox, grid, and BEM file structure to create a cohesive and coherent code that behaves responsively on all screen sizes.
   
 **Figma**  
   
