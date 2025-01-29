@@ -30,6 +30,10 @@
     list-style-type: none;
 }
 
+.profile__sublist-item {
+    list-style-type: none;
+}
+
 .profile__pair {
     margin: 0;
     padding: 0;
@@ -65,8 +69,6 @@
 .profile__button_edit {
     margin: 0;
     padding: 0;
-    background-color: transparent;
-    border: none;
     height: 16px;
     align-self: flex-end;
 }
