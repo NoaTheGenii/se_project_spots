@@ -11,6 +11,10 @@ It has html and css as the coding languages. And within the files, I have used f
 **Figma**  
 
 * [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
+
+**Github Pages**
+
+[Link to project from github pages](https://noathegenii.github.io/se_project_spots/)
   
 **Images**  
 
