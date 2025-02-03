@@ -1,0 +1,66 @@
+.card__image {
+    width: 413px;
+    height: 413px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.card__title {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card__paragraph {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 353px;
+}
+
+.card__btn {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+.card__btn_heart {
+    margin: 0;
+    padding: 0;
+    width: 23px;
+    height: 20px;
+    opacity: 0.4;
+}
+
+.card__btn_heart:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 575px) {
+    .card__image {
+        width: 288px;
+        height: 288px;
+    }
+
+    .card__paragraph {
+        line-height: 1;
+        font-size: 16px;
+        max-width: 240px;
+    }
+
+    .card__btn_heart {
+        height: 20px;
+        width: 18px;
+    }
+}

@@ -2,47 +2,29 @@
     padding-bottom: 20px;
     margin: 34px auto 20px;
     line-height: 1;
-    max-width: 1280px;
     box-sizing: border-box;
     border-bottom: solid rgba(33, 33, 33, 0.4) 1px;
-}
-
-.profile__elements {
     display: flex;
     justify-content: space-between;
 }
 
 .profile__heading {
     display: flex;
-    flex-direction: row;
+    font-display: row;
     gap: 20px;
 }
 
-.profile__description {
-    margin: 0;
-    padding: 0;
+.profile__column {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.profile__list-item {
-    list-style-type: none;
-}
-
-.profile__sublist-item {
-    list-style-type: none;
-}
-
-.profile__pair {
-    margin: 0;
-    padding: 0;
-    max-width: 280px;
-}
-
 .profile__name {
     margin: 0 0 12px;
     padding: 0;
+    font-size: 32px;
+    line-height: 1;
     font-weight: 500;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -56,6 +38,7 @@
     margin: 0;
     padding: 0;
     font-size: 16px;
+    line-height: 1;
     font-weight: 500;
     color: rgba(33, 33, 33, 0.7);
     text-overflow: ellipsis;
@@ -66,51 +49,43 @@
     -webkit-box-orient: vertical;
 }
 
-.profile__button_edit {
+.profile__btn {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: transparent;
+    border: none;
+}
+
+.profile__btn_edit {
     margin: 0;
     padding: 0;
     height: 16px;
-    align-self: flex-end;
+    align-self: flex-start;
+    opacity: 0.7;
 }
 
-.profile__button_edit:hover {
-    background-image: url(../images/edit-button-black.svg);
+.profile__btn_edit:hover {
+    opacity: 1;
     cursor: pointer;
 }
 
-.profile__button_post {
+.profile__btn_post {
     margin: 0;
     padding: 0;
-    background-color: transparent;
-    border: none;
     align-self: flex-end;
     height: 52px;
 }
 
-.profile__button_post:hover {
+.profile__btn_post:hover {
     opacity: 0.8;
     cursor: pointer;
 }
 
-@media screen and (max-width: 1280px) {
-    .profile {
-        max-width: 846px;
-    }
-}
-
-@media screen and (max-width: 848px) {
-    .profile {
-        margin: 32px 40px 20px;
-    }
-}
-
 @media screen and (max-width: 575px) {
     .profile {
-        max-width: 288px;
-        margin: 20px auto;
-    }
-
-    .profile__elements {
+        margin: 20px 16px;
+        min-width: 288px;
         flex-direction: column;
         align-items: center;
     }
@@ -118,27 +93,21 @@
     .profile__heading {
         margin-bottom: 20px;
         flex-direction: column;
-        align-items: center;
+        gap: 12px;
     }
 
     .profile__avatar {
-        background-image: url(../images/bessie-colman-small.png);
         height: 80px;
         width: 80px;
         display: flex;
-        align-items: center;
-    }
-
-    .profile__list-item {
-        text-align: center;
-        line-height: 1.2;
-        font-weight: 500;
+        align-self: center;
     }
 
     .profile__name {
         margin: 0;
-        width: 288px;
+        max-width: 288px;
         font-size: 20px;
+        line-height: 1;
     }
 
     .profile__pair {
@@ -149,7 +118,12 @@
         gap: 6px;
     }
 
-    .profile__button_post {
+    .profile__btn {
+        display: flex;
+        align-self: center;
+    }
+
+    .profile__btn_post {
         background-image: url(../images/post-button-large.svg);
         background-repeat: no-repeat;
         align-self: center;
