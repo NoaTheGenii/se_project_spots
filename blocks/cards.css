@@ -1,6 +1,7 @@
 .cards {
     margin: 0 auto 60px;
     padding-bottom: 40px;
+    max-width: 1280px;
     box-sizing: border-box;
     border-bottom: solid rgba(33, 33, 33, 0.4) 1px;
 }
