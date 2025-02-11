@@ -15,6 +15,9 @@ It has html and css as the coding languages. And within the files, I have used f
 **Github Pages**
 
 * [Link to project from github pages](https://noathegenii.github.io/se_project_spots/)
+
+**Overview video** 
+[Link to video on youtube](https://youtu.be/UUQsqjhbB80)
   
 **Images**  
 
