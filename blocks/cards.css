@@ -13,7 +13,7 @@
     grid-template-columns: repeat(auto-fill, 413px);
     grid-template-rows: repeat(auto-fill, 445px);
     justify-content: center;
-    gap: 20px;
+    gap: 40px 20px;
 }
 
 .cards__item {
@@ -21,16 +21,15 @@
     list-style-type: none;
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 627px) {
     .cards {
         margin: 0 16px 60px;
         padding-bottom: 20px;
-        grid-template-columns: repeat(auto-fill, 288px);
-        grid-template-rows: repeat(auto-fill, 318px);
     }
 
     .cards__list {
         min-width: 288px;
+        row-gap: 20px;
         grid-template-columns: repeat(auto-fill, 288px);
         grid-template-rows: repeat(auto-fill, 318px);
     }

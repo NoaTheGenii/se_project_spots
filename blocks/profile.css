@@ -24,6 +24,7 @@
 .profile__name {
     margin: 0 0 12px;
     padding: 0;
+    color: #212121;
     font-size: 32px;
     line-height: 1;
     font-weight: 500;
@@ -85,7 +86,7 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 627px) {
     .profile {
         margin: 20px 16px;
         min-width: 288px;
@@ -115,6 +116,7 @@
 
     .profile__pair {
         margin-bottom: 32px;
+        text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
