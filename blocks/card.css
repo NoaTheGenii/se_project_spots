@@ -35,7 +35,7 @@
     border: none;
 }
 
-.card__btn_heart {
+.card__btn-heart {
     margin: 0;
     padding: 0;
     width: 23px;
@@ -43,7 +43,7 @@
     opacity: 0.4;
 }
 
-.card__btn_heart:hover {
+.card__btn-heart:hover {
     opacity: 1;
     cursor: pointer;
 }
@@ -60,7 +60,7 @@
         max-width: 240px;
     }
 
-    .card__btn_heart {
+    .card__btn-heart {
         height: 20px;
         width: 18px;
     }
