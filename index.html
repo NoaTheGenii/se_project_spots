@@ -38,7 +38,7 @@
                                 <img
                                     src="./images/edit-button-black.svg"
                                     alt="pencil"
-                                    class="profile__edit-img"
+                                    class="profile__edit-btn"
                                 />
                             </button>
                         </div>
@@ -177,11 +177,7 @@
             <div class="modal" id="edit-profile-modal">
                 <div class="modal__container">
                     <h2 class="modal__heading">Edit profile</h2>
-                    <button
-                        type="submit"
-                        class="modal__close-btn"
-                        onclick="self.close(modal)"
-                    >
+                    <button type="submit" class="modal__close-btn">
                         <img
                             src="./images/close-button.png"
                             alt="close button"
@@ -189,19 +185,19 @@
                         />
                     </button>
                     <form name="edit.profile" class="modal__form">
-                        <label for="name" class="modal__label">
+                        <label for="profile-name-input" class="modal__label">
                             Name
                             <input
-                                id="name"
+                                id="profile-name-input"
                                 type="text"
                                 class="modal__input"
                                 placeholder="Type your name"
                             />
                         </label>
-                        <label for="description" class="modal__label">
+                        <label for="profile-job-input" class="modal__label">
                             Description
                             <input
-                                id="description"
+                                id="profile-job-input"
                                 type="text"
                                 class="modal__input"
                                 placeholder="Describe yourself"
