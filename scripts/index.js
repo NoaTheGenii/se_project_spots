@@ -35,7 +35,21 @@ const editModalCloseButton = editModal.querySelector(".modal__close-btn");
 const editModalNameInput = editModal.querySelector("#profile-name-input");
 const editModalJobInput = editModal.querySelector("#profile-job-input");
 
-/* const editModalSaveButton = document.querySelector(".modal__save-btn"); */
+const cardTemplate = document.querySelector("#card-template");
+const cardsList = document.querySelector(".cards__list");
+
+function getCardElement(data) {
+    const cardElement = cardTemplate.content
+        .querySelector(".card")
+        .cloneNode(true);
+    const cardNameEl = cardElement.querySelector(".card__paragraph");
+    const cardImgEl = cardElement.querySelector(".card__image");
+
+    cardNameEl.textContent = data.name;
+    cardImgEl.src = data.link;
+
+    return cardElement;
+}
 
 function openModal() {
     editModalNameInput.value = profileName.textContent;
@@ -57,3 +71,8 @@ function handleEditFormSubmit(evt) {
 profileEditButton.addEventListener("click", openModal);
 editModalCloseButton.addEventListener("click", closeModal);
 editFormElement.addEventListener("submit", handleEditFormSubmit);
+
+for (let i = 0; i < initalCards.length; i++) {
+    const cardElement = getCardElement(initalCards[i]);
+    cardsList.prepend(cardElement);
+}
