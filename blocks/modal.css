@@ -16,7 +16,7 @@
     visibility: hidden;
 }
 
-.modal__opened {
+.modal_opened {
     visibility: visible;
 }
 
@@ -52,6 +52,7 @@
 
 .modal__close-btn:hover {
     opacity: 1;
+    cursor: pointer;
 }
 
 .modal__form {
@@ -76,6 +77,10 @@
     font-size: 20px;
 }
 
+.modal__input:hover {
+    border: 1px solid rgba(21, 21, 21, 1);
+}
+
 .modal__input:not(:placeholder-shown) {
     color: rgba(21, 21, 21, 1);
 }
@@ -86,6 +91,10 @@
     background-color: #000;
     width: 156px;
     color: #fcf5e5;
+}
+
+.modal__save-btn:hover {
+    cursor: pointer;
 }
 
 @media screen and (max-width: 627px) {
