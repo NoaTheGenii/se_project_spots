@@ -1,3 +1,7 @@
+.card__img-btn {
+    position: relative;
+}
+
 .card__image {
     width: 413px;
     height: 413px;
@@ -5,6 +9,28 @@
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 12px;
+    z-index: 1;
+}
+
+.card__button {
+    margin: 0;
+    padding: 0;
+}
+
+.card__btn-delete {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    z-index: 2;
+}
+
+.card__btn-delete:hover {
+    background-color: #ff6565;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .card__title {
@@ -49,6 +75,16 @@
     cursor: pointer;
 }
 
+.card__btn-heart_filled {
+    width: 22px;
+    height: 20px;
+    opacity: 1;
+}
+
+.card__btn-heart_filled:hover {
+    opacity: 0.4;
+}
+
 @media screen and (max-width: 627px) {
     .card__image {
         width: 288px;
@@ -64,5 +100,10 @@
     .card__btn-heart {
         height: 20px;
         width: 18px;
+    }
+
+    .card__btn-heart_filled {
+        width: 20px;
+        height: 18px;
     }
 }

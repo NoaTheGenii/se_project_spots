@@ -14,19 +14,40 @@
     justify-content: center;
     align-items: center;
     visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.25s ease;
 }
 
 .modal_opened {
     visibility: visible;
+    z-index: 3;
+    opacity: 1;
+    transition: all 0.25s ease;
 }
 
-.modal__container {
+.modal__content {
     position: relative;
     max-width: 730px;
     width: 100%;
     box-sizing: border-box;
     padding: 32px 50px;
     background: #fff;
+    border-radius: 8px;
+}
+
+.modal__content_type_preview {
+    padding: 0;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal__img {
+    width: 100%;
+    max-width: 80vw;
+    max-height: 80vh;
+    object-fit: contain;
     border-radius: 8px;
 }
 
@@ -43,16 +64,37 @@
     padding: 0;
     width: 40px;
     height: 40px;
+    background: transparent url(../images/close-button.svg) center no-repeat;
+    background-size: 35px 35px;
     top: 32px;
     right: 50px;
     opacity: 0.4;
-    background-color: transparent;
     border: none;
+}
+
+.modal__close-btn_type_preview {
+    background-image: url(../images/close-button-white.svg);
+    opacity: 1;
+    top: 0;
+    right: -52.5px;
 }
 
 .modal__close-btn:hover {
     opacity: 1;
     cursor: pointer;
+}
+
+.modal__caption {
+    position: relative;
+    color: #fff;
+    background-color: #212121;
+    line-height: 1.2;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 4px 8px;
+    margin: 8px 0 0;
+    border-radius: 8px;
+    align-self: start;
 }
 
 .modal__form {
@@ -90,6 +132,7 @@
     border-radius: 8px;
     background-color: #000;
     width: 156px;
+    border: none;
     color: #fcf5e5;
 }
 
@@ -103,8 +146,12 @@
         padding: 0 10px;
     }
 
-    .modal__container {
+    .modal__content {
         padding: 12px;
+    }
+
+    .modal__image {
+        border-radius: 4px;
     }
 
     .modal__title {
@@ -114,6 +161,12 @@
     .modal__close-btn {
         top: 12px;
         right: 12px;
+    }
+
+    .modal__close-btn_type_preview {
+        order: -1;
+        right: 13px;
+        top: -36px;
     }
 
     .modal__save-btn {
