@@ -115,6 +115,7 @@ function handleAddCardSubmit(evt) {
     };
     const cardEl = getCardElement(newCard);
     cardsList.prepend(cardEl);
+    cardFormElement.reset();
     closeModal(cardModal);
 }
 
@@ -129,13 +130,7 @@ addCardButton.addEventListener("click", () => {
 });
 
 editFormElement.addEventListener("submit", handleEditFormSubmit);
-
 cardFormElement.addEventListener("submit", handleAddCardSubmit);
-cardFormElement.addEventListener("submit", function (evt) {
-    evt.preventDefault();
-    cardCaptionInput.value = "";
-    cardLinkInput.value = "";
-});
 
 initialCards.forEach((card) => {
     const cardElement = getCardElement(card);

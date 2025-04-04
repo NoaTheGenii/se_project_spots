@@ -13,8 +13,7 @@
 }
 
 .card__button {
-    margin: 0;
-    padding: 0;
+    display: none;
 }
 
 .card__btn-delete {
@@ -53,6 +52,13 @@
     white-space: nowrap;
     overflow: hidden;
     max-width: 353px;
+    list-style-type: none;
+}
+
+.card__btn {
+    background: transparent;
+    width: 23px;
+    height: 20px;
 }
 
 .card__btn-heart {
@@ -95,13 +101,9 @@
         max-width: 240px;
     }
 
-    .card__btn-heart {
-        height: 20px;
-        width: 18px;
-    }
-
-    .card__btn-heart_filled {
+    .card__btn {
         width: 20px;
         height: 18px;
+        background-size: contain;
     }
 }
