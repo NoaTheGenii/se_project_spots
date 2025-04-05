@@ -69,7 +69,7 @@ function getCardElement(data) {
     const cardNameEl = cardElement.querySelector(".card__paragraph");
     const cardImgEl = cardElement.querySelector(".card__image");
     const heartLikeButton = cardElement.querySelector(".card__btn-heart");
-    const deleteButton = cardElement.querySelector(".card__btn-delete");
+    const deleteButton = cardElement.querySelector(".card__button-delete");
 
     cardNameEl.textContent = data.name;
     cardImgEl.src = data.link;
