@@ -6,7 +6,7 @@ Using my knowledge of html structure and css language, I created a copy of the "
 **Intro**
   
 For this project, I had to create a file structure to match the website, "Spots," from Figma.
-It has html and css as the coding languages. And within the files, I have used flexbox, grid, and BEM file structure to create a cohesive and coherent code that behaves responsively on all screen sizes.
+It has html and css as the coding languages. And within the files, I have used flexbox, grid, and BEM file structure to create a cohesive and coherent code that behaves responsively on all screen sizes. All the buttons have functionality, though changes are not retained when the page is refreshed, as the page is not officially launched.
   
 **Figma**  
 
