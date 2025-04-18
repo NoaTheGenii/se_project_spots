@@ -119,12 +119,24 @@
     font-size: 20px;
 }
 
-.modal__input:hover {
+.modal__input:hover,
+.modal__input:focus {
     border: 1px solid rgba(21, 21, 21, 1);
 }
 
 .modal__input:not(:placeholder-shown) {
     color: rgba(21, 21, 21, 1);
+}
+
+.modal__input_invalid,
+.modal__input_invalid:hover,
+.modal__input_invalid:focus {
+    border: 1px solid rgba(255, 0, 0, 0.6);
+}
+
+.modal__error {
+    color: rgba(255, 0, 0, 0.7);
+    line-height: 1.1;
 }
 
 .modal__save-btn {
@@ -139,6 +151,11 @@
 .modal__save-btn:hover {
     background-color: rgba(0, 0, 0, 0.8);
     cursor: pointer;
+}
+
+.modal__save-btn_disabled {
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
 }
 
 @media screen and (max-width: 627px) {

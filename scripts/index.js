@@ -30,6 +30,7 @@ const profileName = document.querySelector(".profile__name");
 const profileJob = document.querySelector(".profile__text");
 
 const closeButtons = document.querySelectorAll(".modal__close-btn");
+const allModals = document.querySelectorAll(".modal");
 
 const editModal = document.querySelector("#edit-profile-modal");
 const editFormElement = document.forms.editProfile;
@@ -87,12 +88,23 @@ function getCardElement(data) {
     return cardElement;
 }
 
+function escapeModal(evt) {
+    if (evt.key === "Escape" || evt.key === 27) {
+        const openedModal = document.querySelector(".modal_opened");
+        closeModal(openedModal);
+    } else {
+        closeModal(evt.target);
+    }
+}
+
 function openModal(modal) {
     modal.classList.add("modal_opened");
+    document.addEventListener("keydown", escapeModal);
 }
 
 function closeModal(modal) {
     modal.classList.remove("modal_opened");
+    document.removeEventListener("keyup", escapeModal);
 }
 
 closeButtons.forEach((button) => {
@@ -131,6 +143,9 @@ addCardButton.addEventListener("click", () => {
 
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 cardFormElement.addEventListener("submit", handleAddCardSubmit);
+allModals.forEach((modal) => {
+    modal.addEventListener("click", escapeModal);
+});
 
 initialCards.forEach((card) => {
     const cardElement = getCardElement(card);

@@ -99,7 +99,13 @@
                                 placeholder="Type your name"
                                 name="name"
                                 required
+                                minlength="2"
+                                maxlength="40"
                             />
+                            <span
+                                id="profile-name-input-error"
+                                class="modal__error"
+                            ></span>
                         </label>
                         <label for="profile-job-input" class="modal__label">
                             Description
@@ -110,8 +116,15 @@
                                 placeholder="Describe yourself"
                                 name="job"
                                 required
+                                minlength="2"
+                                maxlength="200"
                             />
+                            <span
+                                id="profile-job-input-error"
+                                class="modal__error"
+                            ></span>
                         </label>
+
                         <button type="submit" class="modal__save-btn">
                             Save
                         </button>
@@ -134,12 +147,16 @@
                             Image link
                             <input
                                 id="picture-link-input"
-                                type="text"
+                                type="url"
                                 class="modal__input"
                                 placeholder="Paste a link to the picture"
                                 name="link"
                                 required
                             />
+                            <span
+                                id="picture-link-input-error"
+                                class="modal__error"
+                            ></span>
                         </label>
                         <label for="caption-input" class="modal__label">
                             Caption
@@ -150,7 +167,13 @@
                                 placeholder="Type your caption"
                                 name="caption"
                                 required
+                                minlength="2"
+                                maxlength="30"
                             />
+                            <span
+                                id="caption-input-error"
+                                class="modal__error"
+                            ></span>
                         </label>
                         <button type="submit" class="modal__save-btn">
                             Save
@@ -172,5 +195,6 @@
             </div>
         </div>
         <script src="./scripts/index.js" defer></script>
+        <script src="./scripts/validation.js" defer></script>
     </body>
 </html>
