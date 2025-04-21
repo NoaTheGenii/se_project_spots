@@ -93,7 +93,7 @@ function exitModal(evt) {
     closeModal(evt.target);
 }
 
-function escapeModal(evt) {
+function handleModalEscape(evt) {
     if (evt.key === "Escape" || evt.key === 27) {
         const openedModal = document.querySelector(".modal_opened");
         closeModal(openedModal);
@@ -102,12 +102,12 @@ function escapeModal(evt) {
 
 function openModal(modal) {
     modal.classList.add("modal_opened");
-    document.addEventListener("keydown", escapeModal);
+    document.addEventListener("keydown", handleModalEscape);
 }
 
 function closeModal(modal) {
     modal.classList.remove("modal_opened");
-    document.removeEventListener("keydown", escapeModal);
+    document.removeEventListener("keydown", handleModalEscape);
 }
 
 closeButtons.forEach((button) => {
