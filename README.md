@@ -22,15 +22,18 @@ It has html and css as the coding languages. And within the files, I have used f
   
 **Images**  
 
-These are examples of how the site would look on different screen sizes:
+These are examples showing how the site would look on different screen sizes and with different modals open:
 
- ![Screenshot 2025-01-26 160152](https://github.com/user-attachments/assets/e62415e0-72a2-40af-9763-0e02fb794818)
+![Screenshot 2025-04-18 125450](https://github.com/user-attachments/assets/506c03f0-a8c6-43f6-a932-9de8a41f4e47)
 
+![Screenshot 2025-04-18 125526](https://github.com/user-attachments/assets/41626bae-5779-4814-9efa-70801c33b91e)
 
-![Screenshot 2025-01-26 160803](https://github.com/user-attachments/assets/67d40847-0621-43a3-8f6d-85e867aecb18)
+![Screenshot 2025-04-18 125627](https://github.com/user-attachments/assets/50fee811-5fb9-4793-9323-bb4b9e1faf0c)
 
+![Screenshot 2025-04-18 154025](https://github.com/user-attachments/assets/ed7f70a5-f6ff-401a-8b6a-e826ce012d37)
 
-![Screenshot 2025-01-26 161945](https://github.com/user-attachments/assets/884e6fab-6135-437a-ac53-9578918de889)
+![Screenshot 2025-04-18 154147](https://github.com/user-attachments/assets/d7e88f38-8aef-451c-8015-095ec7a95fbe)
 
+![Screenshot 2025-04-18 154303](https://github.com/user-attachments/assets/9954929f-b446-406a-b015-21b6ab9ed394)
 
-![Screenshot 2025-01-26 162009](https://github.com/user-attachments/assets/f74ebae6-f288-47f0-8e8b-22423f8e3e22)
+![Screenshot 2025-04-18 154330](https://github.com/user-attachments/assets/84b9a68b-7a7f-4cf6-b935-002d07cffe9c)
