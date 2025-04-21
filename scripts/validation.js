@@ -33,13 +33,22 @@ const hasInvalidInput = (inputList) => {
     });
 };
 
+const disableButton = (buttonEl) => {
+    buttonEl.disabled = true;
+};
+
+const resetValidation = (formEl, inputList, config) => {
+    inputList.forEach((input) => {
+        hideInputError(formEl, input, config);
+    });
+};
+
 const toggleButtonState = (inputList, buttonEl, config) => {
     if (hasInvalidInput(inputList)) {
         buttonEl.classList.add(config.inactiveButtonClass);
-        buttonEl.disabled = true;
+        disableButton(buttonEl);
     } else {
         buttonEl.classList.remove(config.inactiveButtonClass);
-        buttonEl.disabled = false;
     }
 };
 
