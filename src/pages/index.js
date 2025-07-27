@@ -86,7 +86,9 @@ api
       return cardsList.prepend(cardElement);
     });
   })
-  .catch(console.error);
+  .catch((err) => {
+    console.error("Error fetching initial data:", err);
+  });
 
 function exitModal(evt) {
   closeModal(evt.target);
@@ -136,8 +138,11 @@ function handleDeleteSubmit(evt) {
     .then(() => {
       selectedCard.remove();
       closeModal(deleteModal);
+      disableButton(cardSubmitButton);
     })
-    .catch(console.error)
+    .catch((err) => {
+      console.error("Error deleting card:", err);
+    })
     .finally(() => {
       setButtonText(evt.submitter, false, "Deleting...", "Delete");
     });
@@ -191,10 +196,12 @@ function handleAddCardSubmit(evt) {
       const newCard = getCardElement(data);
       cardsList.prepend(newCard);
       cardFormElement.reset();
-      disableButton(cardSubmitButton);
+      disableButton(evt.submitter);
       closeModal(cardModal);
     })
-    .catch(console.error)
+    .catch((err) => {
+      console.error("Error adding new card:", err);
+    })
     .finally(() => {
       setButtonText(evt.submitter, false);
     });
@@ -209,7 +216,7 @@ function toggleLike(evt, data) {
       data.isLiked = !data.isLiked;
     })
     .catch((err) => {
-      console.error(err);
+      console.error("Like status not changed:", err);
     });
 }
 
@@ -236,12 +243,15 @@ function handleProfileFormSubmit(evt) {
     .then((data) => {
       profileName.textContent = data.name;
       profileJob.textContent = data.about;
+      disableButton(evt.submitter);
+      closeModal(profileModal);
     })
-    .catch(console.error)
+    .catch((err) => {
+      console.error("Error updating user info:", err);
+    })
     .finally(() => {
       setButtonText(evt.submitter, false);
     });
-  closeModal(profileModal);
 }
 
 profileEditButton.addEventListener("click", () => {
@@ -267,13 +277,17 @@ function handleAvatarFormSubmit(evt) {
     .then((data) => {
       avatar.src = data.avatar;
       avatar.alt = "Avatar of " + data.name;
+      console.log(evt.submitter);
+      disableButton(evt.submitter);
+      closeModal(avatarModal);
+      avatarFormElement.reset();
     })
-    .catch(console.error)
+    .catch((err) => {
+      console.error("Error updating avatar:", err);
+    })
     .finally(() => {
       setButtonText(evt.submitter, false);
     });
-  closeModal(avatarModal);
-  avatarFormElement.reset();
 }
 
 avatarModalBtn.addEventListener("click", () => {
