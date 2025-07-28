@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Noa Dusett" />
+        <meta name="description" content="photo-sharing website" />
+        <meta name="keywords" content="photo-sharing, historical figure" />
+        <link rel="stylesheet" href="pages/index.css" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <title>Spots</title>
+    </head>
+    <body>
+        <div class="page">
+            <header class="header">
+                <img
+                    src="./images/logo.svg"
+                    alt="spots logo"
+                    class="header__logo"
+                />
+            </header>
+            <main class="content">
+                <section class="profile">
+                    <div class="profile__heading">
+                        <img
+                            src="./images/bessie-colman.png"
+                            alt="black & white photo of Bessie Colman"
+                            class="profile__avatar"
+                        />
+                        <div class="profile__column">
+                            <div class="profile__pair">
+                                <h1 class="profile__name">Bessie Colman</h1>
+
+                                <p class="profile__text">Civil Aviator</p>
+                            </div>
+
+                            <button class="profile__btn" type="button">
+                                <img
+                                    src="./images/edit-button-black.svg"
+                                    alt="pencil"
+                                    class="profile__edit-btn"
+                                />
+                            </button>
+                        </div>
+                    </div>
+                    <button class="profile__btn" type="button">
+                        <img
+                            src="./images/post-button.svg"
+                            alt="new post button"
+                            class="profile__add-img"
+                        />
+                    </button>
+                </section>
+
+                <section class="cards">
+                    <ul class="cards__list">
+                        <template id="card-template">
+                            <li class="cards__item card">
+                                <div class="card__img-btn">
+                                    <button
+                                        class="card__button card__button-delete"
+                                        type="button"
+                                    ></button>
+                                    <img src="" alt="" class="card__image" />
+                                </div>
+                                <div class="card__title">
+                                    <h2 class="card__paragraph"></h2>
+
+                                    <button
+                                        class="card__btn card__btn-heart"
+                                        type="button"
+                                    ></button>
+                                </div>
+                            </li>
+                        </template>
+                    </ul>
+                </section>
+            </main>
+            <footer class="footer">
+                <p class="footer__text">2025 &copy; Spots</p>
+            </footer>
+            <div class="modal" id="edit-profile-modal">
+                <div class="modal__content">
+                    <h2 class="modal__heading">Edit profile</h2>
+                    <button type="button" class="modal__close-btn">
+                        <img
+                            src="./images/close-button.svg"
+                            alt="close button"
+                            class="modal__close-img"
+                        />
+                    </button>
+                    <form name="editProfile" class="modal__form">
+                        <label for="profile-name-input" class="modal__label">
+                            Name
+                            <input
+                                id="profile-name-input"
+                                type="text"
+                                class="modal__input"
+                                placeholder="Type your name"
+                                name="name"
+                                required
+                                minlength="2"
+                                maxlength="40"
+                            />
+                            <span
+                                id="profile-name-input-error"
+                                class="modal__error"
+                            ></span>
+                        </label>
+                        <label for="profile-job-input" class="modal__label">
+                            Description
+                            <input
+                                id="profile-job-input"
+                                type="text"
+                                class="modal__input"
+                                placeholder="Describe yourself"
+                                name="job"
+                                required
+                                minlength="2"
+                                maxlength="200"
+                            />
+                            <span
+                                id="profile-job-input-error"
+                                class="modal__error"
+                            ></span>
+                        </label>
+
+                        <button type="submit" class="modal__save-btn">
+                            Save
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="modal" id="add-post-modal">
+                <div class="modal__content">
+                    <h2 class="modal__heading">New post</h2>
+                    <button type="button" class="modal__close-btn">
+                        <img
+                            src="./images/close-button.svg"
+                            alt="close button"
+                            class="modal__close-img"
+                        />
+                    </button>
+                    <form name="addPost" class="modal__form">
+                        <label for="picture-link-input" class="modal__label">
+                            Image link
+                            <input
+                                id="picture-link-input"
+                                type="url"
+                                class="modal__input"
+                                placeholder="Paste a link to the picture"
+                                name="link"
+                                required
+                            />
+                            <span
+                                id="picture-link-input-error"
+                                class="modal__error"
+                            ></span>
+                        </label>
+                        <label for="caption-input" class="modal__label">
+                            Caption
+                            <input
+                                id="caption-input"
+                                type="text"
+                                class="modal__input"
+                                placeholder="Type your caption"
+                                name="caption"
+                                required
+                                minlength="2"
+                                maxlength="30"
+                            />
+                            <span
+                                id="caption-input-error"
+                                class="modal__error"
+                            ></span>
+                        </label>
+                        <button type="submit" class="modal__save-btn">
+                            Save
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="modal" id="previewModal">
+                <div class="modal__content modal__content_type_preview">
+                    <img src="" alt="" class="modal__img" />
+                    <button
+                        aria-label="Close modal"
+                        type="button"
+                        class="modal__close-btn modal__close-btn_type_preview"
+                    ></button>
+                    <p class="modal__caption"></p>
+                </div>
+            </div>
+        </div>
+        <script src="./scripts/index.js" defer></script>
+        <script src="./scripts/validation.js" defer></script>
+    </body>
+</html>
